@@ -1,0 +1,112 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== FUNDO DA PÁGINA ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../img/logo30.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* OVERLAY ESCURO */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== CAMPOS ===== */
+input,
+select,
+button {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* ===== BOTÕES ===== */
+button {
+    background: #198754;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #157347;
+}
+
+/* ===== OPÇÕES PIX / CARTÃO ===== */
+.opcoes {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+/* ===== PAINÉIS ===== */
+.painel {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+/* ===== ERROS ===== */
+.erro {
+    color: red;
+    font-size: 13px;
+}
+
+/* ===== CAMPO CARTÃO COM BANDEIRA ===== */
+.campo-cartao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-cartao input {
+    flex: 1;
+    padding: 8px;
+}
+
+/* ===== BANDEIRA DO CARTÃO ===== */
+.bandeira {
+    width: 40px;
+    height: 26px;
+    display: none; /* aparece via JS */
+    object-fit: contain;
+}
+
+/* ===== MENSAGEM DE SUCESSO ===== */
+.sucesso {
+    display: none;
+    text-align: center;
+    color: green;
+    margin-top: 15px;
+}

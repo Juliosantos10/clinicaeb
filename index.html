@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>EB Saúde e Estética - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-page">
+
+    <!-- IMAGEM À ESQUERDA -->
+    <div class="login-image"></div>
+
+    <!-- LOGIN À DIREITA -->
+    <div class="login-form">
+        <form id="formLogin" autocomplete="off">
+            <h2>Entrar</h2>
+
+            <label>Usuário</label>
+            <input
+                type="text"
+                id="usuario"
+                name="cpf_login"
+                placeholder="Digite seu CPF"
+                autocomplete="new-password"
+                inputmode="numeric">
+
+            <label>Senha</label>
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha"
+                autocomplete="new-password"
+                inputmode="numeric">
+
+            <label class="mostrar-senha">
+                <input type="checkbox" onclick="mostrarSenha()">
+                <span>Mostrar senha</span>
+            </label>
+
+            <button type="submit">Entrar</button>
+
+            <div class="links">
+                <a href="../html/cadastro.html">Cadastrar-se</a><br>
+                <a href="#" id="btnRecuperar">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
