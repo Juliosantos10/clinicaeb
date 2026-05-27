@@ -7,7 +7,6 @@
 </head>
 <body>
 
-<!-- HERO COM FUNDO -->
 <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
@@ -16,14 +15,13 @@
     </div>
 </section>
 
-<!-- LISTA DE PROCEDIMENTOS -->
 <section class="procedimentos">
 
     <div class="card">
         <img src="../img/botox.png" alt="Procedimento Botox">
         <h3>BOTOX</h3>
         <p>
-            O Botox é um procedimento estético minimamente invasivo que suaviza rugas e linhas de expressão, proporcionando uma aparência mais jovem e natural.
+            O Botox é um procedimento estético minimamente invasivo que suaviza rugas e linhas de expressão, proporcionando aparência mais jovem e natural.
         </p>
         <a href="#" onclick="mostrarProcedimento('botox'); return false;">Saiba mais</a>
     </div>
@@ -32,8 +30,7 @@
         <img src="../img/capilar1.png" alt="Tratamento Capilar">
         <h3>Tratamento Capilar</h3>
         <p>
-            Procedimento estético indicado para o fortalecimento capilar
-            e combate à queda de cabelo.
+            Procedimento estético indicado para fortalecimento capilar e combate à queda de cabelo.
         </p>
         <a href="#" onclick="mostrarProcedimento('capilar'); return false;">Saiba mais</a>
     </div>
@@ -42,108 +39,26 @@
         <img src="../img/labial1.png" alt="Preenchimento Labial">
         <h3>Preenchimento Labial</h3>
         <p>
-            Suaviza marcas de expressão e promove rejuvenescimento
-            com resultados naturais.
+            Procedimento para realce, volume e harmonização dos lábios.
         </p>
         <a href="#" onclick="mostrarProcedimento('labial'); return false;">Saiba mais</a>
     </div>
 
 </section>
 
-<!-- CONTEÚDO DINÂMICO DO PROCEDIMENTO -->
-<section id="conteudoProcedimento" style="display:none; margin-top:40px;">
-    <div style="text-align:center;">
+<section id="conteudoProcedimento" class="detalhes-procedimento" style="display:none;">
+    <div class="detalhes-card">
         <h2 id="tituloProcedimento"></h2>
 
-        <img
-            id="imagemProcedimento"
-            src=""
-            alt="Procedimento"
-            style="max-width:400px; border-radius:10px;"
-        >
-    </div>
+        <img id="imagemProcedimento" src="" alt="Procedimento">
 
-    <p
-        id="descricaoProcedimento"
-        style="text-align:center; font-size:1.1rem; margin-top:20px;">
-    </p>
+        <p id="descricaoProcedimento"></p>
 
-    <!-- FORMULÁRIO DE AGENDAMENTO -->
-    <div style="max-width:500px; margin:20px auto; padding:20px; border:1px solid #ccc; border-radius:10px;">
-        <h3 style="text-align:center;">Agende sua sessão</h3>
+        <a id="btnAgendar" href="#" class="btn-agendar">
+            Agendar agora
+        </a>
 
-        <form id="formAgendamento">
-            <input
-                type="text"
-                id="nome"
-                placeholder="Nome completo"
-                required
-                style="width:100%; padding:10px; margin-bottom:10px;"
-            >
-
-            <input
-                type="email"
-                id="email"
-                placeholder="E-mail"
-                required
-                style="width:100%; padding:10px; margin-bottom:10px;"
-            >
-
-            <input
-                type="tel"
-                id="telefone"
-                placeholder="Telefone"
-                required
-                style="width:100%; padding:10px; margin-bottom:10px;"
-            >
-
-            <input
-                type="text"
-                id="procedimentoSelecionado"
-                placeholder="Procedimento selecionado"
-                readonly
-                style="width:100%; padding:10px; margin-bottom:10px; background:#f5f5f5;"
-            >
-
-            <input
-                type="date"
-                id="data"
-                required
-                style="width:100%; padding:10px; margin-bottom:10px;"
-            >
-
-            <input
-                type="time"
-                id="hora"
-                required
-                style="width:100%; padding:10px; margin-bottom:10px;"
-            >
-
-            <button
-                type="submit"
-                style="width:100%; padding:10px; background:#000; color:#fff; border:none; border-radius:5px;">
-                Enviar agendamento
-            </button>
-
-            <button
-                type="button"
-                onclick="abrirWhatsApp()"
-                style="width:100%; padding:10px; background:#25D366; color:#fff; border:none; border-radius:5px; margin-top:10px;">
-                Agendar pelo WhatsApp
-            </button>
-        </form>
-
-        <div
-            id="mensagemSucesso"
-            style="display:none; text-align:center; color:green; margin-top:10px;">
-            Obrigado! Seu agendamento foi enviado com sucesso.
-        </div>
-    </div>
-
-    <div style="text-align:center; margin-bottom:40px;">
-        <button
-            onclick="voltarLista();"
-            style="padding:10px 20px; border:1px solid #000; background:#fff; cursor:pointer;">
+        <button onclick="voltarLista();" class="btn-voltar">
             ← Voltar
         </button>
     </div>
