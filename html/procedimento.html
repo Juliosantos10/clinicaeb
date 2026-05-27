@@ -20,7 +20,7 @@
 <section class="procedimentos">
 
     <div class="card">
-        <img src="../img/botox.png" alt="Procedimento 1">
+        <img src="../img/botox.png" alt="Procedimento Botox">
         <h3>BOTOX</h3>
         <p>
             O Botox é um procedimento estético minimamente invasivo que suaviza rugas e linhas de expressão, proporcionando uma aparência mais jovem e natural.
@@ -29,7 +29,7 @@
     </div>
 
     <div class="card">
-        <img src="../img/capilar1.png" alt="Procedimento 2">
+        <img src="../img/capilar1.png" alt="Tratamento Capilar">
         <h3>Tratamento Capilar</h3>
         <p>
             Procedimento estético indicado para o fortalecimento capilar
@@ -39,7 +39,7 @@
     </div>
 
     <div class="card">
-        <img src="../img/labial1.png" alt="Procedimento 3">
+        <img src="../img/labial1.png" alt="Preenchimento Labial">
         <h3>Preenchimento Labial</h3>
         <p>
             Suaviza marcas de expressão e promove rejuvenescimento
@@ -54,75 +54,102 @@
 <section id="conteudoProcedimento" style="display:none; margin-top:40px;">
     <div style="text-align:center;">
         <h2 id="tituloProcedimento"></h2>
-        <img id="imagemProcedimento" src="" alt="Procedimento" style="max-width:400px; border-radius:10px;">
+
+        <img
+            id="imagemProcedimento"
+            src=""
+            alt="Procedimento"
+            style="max-width:400px; border-radius:10px;"
+        >
     </div>
-    <p id="descricaoProcedimento" style="text-align:center; font-size:1.1rem; margin-top:20px;"></p>
+
+    <p
+        id="descricaoProcedimento"
+        style="text-align:center; font-size:1.1rem; margin-top:20px;">
+    </p>
 
     <!-- FORMULÁRIO DE AGENDAMENTO -->
     <div style="max-width:500px; margin:20px auto; padding:20px; border:1px solid #ccc; border-radius:10px;">
         <h3 style="text-align:center;">Agende sua sessão</h3>
+
         <form id="formAgendamento">
-            <input type="text" id="nome" placeholder="Nome completo" required style="width:100%; padding:10px; margin-bottom:10px;">
-            <input type="email" id="email" placeholder="E-mail" required style="width:100%; padding:10px; margin-bottom:10px;">
-            <input type="tel" id="telefone" placeholder="Telefone" required style="width:100%; padding:10px; margin-bottom:10px;">
-            <input type="date" id="data" required style="width:100%; padding:10px; margin-bottom:10px;">
-            <input type="time" id="hora" required style="width:100%; padding:10px; margin-bottom:10px;">
-            <button type="submit" style="width:100%; padding:10px; background:#000; color:#fff; border:none; border-radius:5px;">Enviar agendamento</button>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Nome completo"
+                required
+                style="width:100%; padding:10px; margin-bottom:10px;"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="E-mail"
+                required
+                style="width:100%; padding:10px; margin-bottom:10px;"
+            >
+
+            <input
+                type="tel"
+                id="telefone"
+                placeholder="Telefone"
+                required
+                style="width:100%; padding:10px; margin-bottom:10px;"
+            >
+
+            <input
+                type="text"
+                id="procedimentoSelecionado"
+                placeholder="Procedimento selecionado"
+                readonly
+                style="width:100%; padding:10px; margin-bottom:10px; background:#f5f5f5;"
+            >
+
+            <input
+                type="date"
+                id="data"
+                required
+                style="width:100%; padding:10px; margin-bottom:10px;"
+            >
+
+            <input
+                type="time"
+                id="hora"
+                required
+                style="width:100%; padding:10px; margin-bottom:10px;"
+            >
+
+            <button
+                type="submit"
+                style="width:100%; padding:10px; background:#000; color:#fff; border:none; border-radius:5px;">
+                Enviar agendamento
+            </button>
+
+            <button
+                type="button"
+                onclick="abrirWhatsApp()"
+                style="width:100%; padding:10px; background:#25D366; color:#fff; border:none; border-radius:5px; margin-top:10px;">
+                Agendar pelo WhatsApp
+            </button>
         </form>
-        <div id="mensagemSucesso" style="display:none; text-align:center; color:green; margin-top:10px;">
+
+        <div
+            id="mensagemSucesso"
+            style="display:none; text-align:center; color:green; margin-top:10px;">
             Obrigado! Seu agendamento foi enviado com sucesso.
         </div>
     </div>
 
     <div style="text-align:center; margin-bottom:40px;">
-        <button onclick="voltarLista();" style="padding:10px 20px; border:1px solid #000; background:#fff; cursor:pointer;">← Voltar</button>
+        <button
+            onclick="voltarLista();"
+            style="padding:10px 20px; border:1px solid #000; background:#fff; cursor:pointer;">
+            ← Voltar
+        </button>
     </div>
 </section>
 
-<script>
-// Dados dos procedimentos
-const procedimentos = {
-    botox: {
-        titulo: "Botox",
-        descricao: "O Botox suaviza rugas e linhas de expressão, proporcionando aparência mais jovem e natural. Rápido, seguro e realizado por profissionais qualificados.",
-        imagem: "../img/botox.png"
-    },
-    capilar: {
-        titulo: "Tratamento Capilar",
-        descricao: "Fortalece os fios e combate a queda de cabelo, promovendo saúde capilar e bem-estar.",
-        imagem: "../img/capilar1.png"
-    },
-    labial: {
-        titulo: "Preenchimento Labial",
-        descricao: "Suaviza marcas de expressão e promove rejuvenescimento com resultados naturais e harmônicos.",
-        imagem: "../img/labial1.png"
-    }
-};
-
-// Função para mostrar conteúdo do procedimento
-function mostrarProcedimento(tipo) {
-    const conteudo = procedimentos[tipo];
-    document.getElementById('tituloProcedimento').innerText = conteudo.titulo;
-    document.getElementById('descricaoProcedimento').innerText = conteudo.descricao;
-    document.getElementById('imagemProcedimento').src = conteudo.imagem;
-
-    document.querySelector('.procedimentos').style.display = 'none';
-    document.getElementById('conteudoProcedimento').style.display = 'block';
-}
-
-// Voltar para lista de procedimentos
-function voltarLista() {
-    document.getElementById('conteudoProcedimento').style.display = 'none';
-    document.querySelector('.procedimentos').style.display = 'flex';
-}
-
-// Simula envio do formulário
-document.getElementById('formAgendamento').addEventListener('submit', function(e){
-    e.preventDefault();
-    document.getElementById('mensagemSucesso').style.display = 'block';
-    this.reset();
-});
-</script>
+<script src="../js/procedimento.js"></script>
 
 </body>
 </html>

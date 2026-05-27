@@ -1,3 +1,4 @@
+/*
 // ================= ALTERNAR ENTRE PIX E CARTÃO =================
 function mostrarTab(id, btn) {
     // Botões
@@ -101,4 +102,5 @@ if (cpfPix) {
     cpfPix.addEventListener('input', function () {
         this.value = this.value.replace(/\D/g, '').substring(0, 11);
     });
-}
+}   
+    */

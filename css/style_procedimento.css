@@ -92,3 +92,57 @@
     border-radius: 4px;
     font-size: 14px;
 }
+
+/* CONTEÚDO DO PROCEDIMENTO */
+#conteudoProcedimento {
+    padding: 40px 5%;
+    background: #f9f9f9;
+}
+
+#tituloProcedimento {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#descricaoProcedimento {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* FORMULÁRIO DE AGENDAMENTO */
+#formAgendamento input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#formAgendamento input:focus {
+    border-color: #000;
+}
+
+#formAgendamento button {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#formAgendamento button:hover {
+    opacity: 0.9;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    #imagemProcedimento {
+        width: 90%;
+    }
+}

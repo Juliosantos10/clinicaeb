@@ -2,54 +2,40 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>EB Saúde e Estética - Login</title>
+    <title>EB Saúde e Estética</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="login-page">
+<header class="topo">
+    <h1>EB Saúde e Estética</h1>
+    <p>Escolha um procedimento para saber mais e agendar seu atendimento.</p>
+</header>
 
-    <!-- IMAGEM À ESQUERDA -->
-    <div class="login-image"></div>
+<main class="procedimentos">
 
-    <!-- LOGIN À DIREITA -->
-    <div class="login-form">
-        <form id="formLogin" autocomplete="off">
-            <h2>Entrar</h2>
-
-            <label>Usuário</label>
-            <input
-                type="text"
-                id="usuario"
-                name="cpf_login"
-                placeholder="Digite seu CPF"
-                autocomplete="new-password"
-                inputmode="numeric">
-
-            <label>Senha</label>
-            <input
-                type="password"
-                id="senha"
-                placeholder="Digite sua senha"
-                autocomplete="new-password"
-                inputmode="numeric">
-
-            <label class="mostrar-senha">
-                <input type="checkbox" onclick="mostrarSenha()">
-                <span>Mostrar senha</span>
-            </label>
-
-            <button type="submit">Entrar</button>
-
-            <div class="links">
-                <a href="../html/cadastro.html">Cadastrar-se</a><br>
-                <a href="#" id="btnRecuperar">Esqueceu a senha?</a>
-            </div>
-        </form>
+    <div class="card">
+        <img src="img/botox.png" alt="Botox">
+        <h2>Botox</h2>
+        <p>Tratamento estético para suavizar linhas de expressão.</p>
+        <a href="./html/procedimento.html?procedimento=botox" class="btn">Saiba mais</a>
     </div>
 
-</div>
+    <div class="card">
+        <img src="img/capilar1.png" alt="Tratamento Capilar">
+        <h2>Tratamento Capilar</h2>
+        <p>Cuidados para fortalecimento e saúde dos fios.</p>
+        <a href="html/procedimento.html?procedimento=capilar" class="btn">Saiba mais</a>
+    </div>
 
-<script src="js/script.js"></script>
+    <div class="card">
+        <img src="img/labial1.png" alt="Preenchimento Labial">
+        <h2>Preenchimento Labial</h2>
+        <p>Procedimento para realce e harmonização dos lábios.</p>
+        <a href="./html/procedimento.html?procedimento=labial" class="btn">Saiba mais</a>
+    </div>
+
+</main>
+
 </body>
 </html>
