@@ -24,22 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     formulario.addEventListener("submit", function (e) {
         e.preventDefault();
-        abrirWhatsApp();
-        document.getElementById("mensagemSucesso").style.display = "block";
+        enviarAgendamentoWhatsApp();
     });
 });
 
-function abrirWhatsApp() {
+function enviarAgendamentoWhatsApp() {
     const nome = document.getElementById("nome").value.trim();
     const email = document.getElementById("email").value.trim();
     const telefone = document.getElementById("telefone").value.trim();
     const data = document.getElementById("data").value;
     const hora = document.getElementById("hora").value;
-
-    if (!nome || !email || !telefone || !data || !hora) {
-        alert("Preencha todos os campos antes de continuar.");
-        return;
-    }
 
     const mensagem = `Olá, gostaria de agendar um procedimento.
 
@@ -51,6 +45,21 @@ Data: ${data}
 Horário: ${hora}`;
 
     const numeroWhatsApp = "5531984008626";
+
+    window.open(
+        `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`,
+        "_blank"
+    );
+
+    document.getElementById("mensagemSucesso").style.display = "block";
+}
+
+function abrirWhatsApp() {
+    const numeroWhatsApp = "5531984008626";
+
+    const mensagem = `Olá! Gostaria de falar sobre os procedimentos da EB Saúde e Estética.
+
+Procedimento de interesse: ${procedimentoAtual}`;
 
     window.open(
         `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`,
