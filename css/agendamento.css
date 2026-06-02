@@ -5,110 +5,182 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Página inteira */
-.login-page {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
+body {
+    background: #000;
 }
 
-/* LADO ESQUERDO - FUNDO PRETO + IMAGEM */
-.login-image {
-    width: 50%;
-    background-color: #000;
-    background-image: url("../img/logoeb.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-/* LADO DIREITO - LOGIN */
-.login-form {
-    width: 50%;
-    background: #000000;
+/* TOPO */
+.hero {
+    min-height: 30vh;
+    background: #000;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #ffffff;
+    justify-content: center;
 }
 
-/* FORMULÁRIO */
-.login-form form {
-    width: 320px;
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: #d4af37;
 }
 
-.login-form h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.hero-content h1 {
+    font-size: 38px;
 }
 
-.login-form label {
-    display: block;
-    margin-top: 12px;
-    font-size: 16px;
+.hero-content p {
+    font-size: 18px;
 }
 
-/* inputs normais */
-.login-form input:not([type="checkbox"]) {
+/* ÁREA DO FORMULÁRIO */
+#conteudoProcedimento {
+    min-height: 70vh;
+
+    background:
+        url("../img/logo1.png") center center no-repeat,
+        #000;
+
+    background-size: 750px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+/* CAIXA DO FORMULÁRIO */
+.form-box {
     width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: none;
+    max-width: 500px;
+    padding: 25px;
+
+    border: 1px solid rgba(212, 175, 55, 0.6);
+    border-radius: 15px;
+
+    background: rgba(0, 0, 0, 0.0);
+    backdrop-filter: blur(4px);
+}
+
+.form-box h3 {
+    text-align: center;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+    border: 1px solid #d4af37;
     outline: none;
 }
 
-/* BOTÃO */
-.login-form button {
+#procedimentoSelecionado {
+    background: #f5f5f5;
+}
+
+.btn-agendar {
     width: 100%;
     padding: 12px;
-    margin-top: 20px;
-    font-size: 26px;
-    cursor: pointer;
-    background: #ffffff;
+
+    background: #d4af37;
+    color: #000;
+
     border: none;
-     color: #000000;
+    border-radius: 5px;
+
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* LINKS */
-.links {
-    margin-top: 15px;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column; /* um embaixo do outro */
-    gap: 0.8px;              /* ESPAÇO ENTRE OS LINKS */
+.btn-whatsapp {
+    width: 100%;
+    padding: 12px;
+
+    background: #25D366;
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.links a {
-    color: #fefefe;
+#mensagemSucesso {
+    display: none;
+    text-align: center;
+    color: #25D366;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* BOTÃO VOLTAR */
+.voltar-box {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.voltar-box a {
+    padding: 10px 25px;
+    border: 1px solid #d4af37;
+
+    background: rgba(0, 0, 0, 0.8);
+    color: #d4af37;
+
     text-decoration: none;
-}
-
-#usuario::placeholder,
-#senha::placeholder {
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 14px;
+    border-radius: 5px;
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-    .login-image {
-        display: none;
+    .hero-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 
-    .login-form {
-        width: 100%;
+    .hero-content h1 {
+        font-size: 32px;
     }
-}
-.mostrar-senha {
-    display: flex;
-    align-items: center;   /* alinhamento vertical */
-    gap: 8px;              /* espaço entre checkbox e texto */
-    margin-top: 12px;
-    font-size: 14px;
-    cursor: pointer;
+
+    .hero-content p {
+        font-size: 16px;
+    #conteudoProcedimento {
+    min-height: 70vh;
+
+    background:
+        url("../img/logo1.png") center center no-repeat,
+        #000;
+
+    background-size: 950px;
 }
 
-.mostrar-senha input {
-    margin: 0;
-    width: auto;
+    .form-box {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 25vh;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+   #conteudoProcedimento {
+    min-height: auto;
+    padding-top: 10px;
+}
+}   
 }
