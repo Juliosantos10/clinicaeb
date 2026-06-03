@@ -345,3 +345,83 @@ body {
         font-size: 18px;
     }
 }
+/* =======================
+   RODAPÉ
+======================= */
+
+.rodape {
+    background: #ffffff;
+    color: #000;
+    text-align: center;
+    padding: 20px 15px;
+    border-top: 1px solid #ddd;
+}
+
+.rodape h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.rodape-contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 12px;
+}
+
+.rodape-contatos a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.rodape-contatos a:hover {
+    color: #d4af37;
+}
+
+.rodape-contatos img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.rodape p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+    .rodape {
+        padding: 15px 10px;
+    }
+
+    .rodape h3 {
+        font-size: 18px;
+    }
+
+    .rodape-contatos {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .rodape-contatos a {
+        font-size: 15px;
+    }
+
+    .rodape-contatos img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .rodape p {
+        font-size: 11px;
+    }
+}

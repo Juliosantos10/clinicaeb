@@ -234,3 +234,160 @@ form select {
         font-size: 17px;
     }
 }
+
+/* =======================
+   RODAPÉ
+======================= */
+
+.rodape {
+    background: #000;
+    color: #d4af37;
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.rodape h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.rodape-contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.rodape-contatos a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.rodape-contatos a:hover {
+    color: #ffffff;
+}
+
+.rodape-contatos img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.rodape p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+    .rodape-contatos {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .rodape h3 {
+        font-size: 22px;
+    }
+
+    .rodape-contatos a {
+        font-size: 17px;
+    }
+}
+
+/* =======================
+   RODAPÉ
+======================= */
+
+.rodape {
+    background: #000;
+    color: #d4af37;
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.rodape h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.rodape-contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 25px;
+}
+
+.rodape-contatos a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.rodape-contatos a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.rodape-contatos img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.rodape p {
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .rodape-contatos {
+        gap: 50px;
+    }
+
+    .rodape-contatos a {
+        font-size: 18px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+    .rodape {
+        padding: 30px 15px;
+    }
+
+    .rodape h3 {
+        font-size: 24px;
+    }
+
+    .rodape-contatos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rodape-contatos a {
+        font-size: 18px;
+    }
+
+    .rodape-contatos img {
+        width: 28px;
+        height: 28px;
+    }
+}
