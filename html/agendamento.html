@@ -2,30 +2,66 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Ajuste essencial para celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Agendamento - EB Saúde e Estética</title>
-    <link rel="stylesheet" href="../css/agendamento.css">
+    <link rel="stylesheet" href="../css/style_agendamento.css">
 </head>
 <body>
 
 <section class="hero">
-   <div class="hero-content">
-    <img src="../img/logo1.png" alt="EB Saúde e Estética" class="hero-logo">
-</div>
+    <div class="hero-content">
+        <img src="../img/logo1.png" alt="EB Saúde e Estética" class="hero-logo">
+    </div>
 </section>
 
 <section id="conteudoProcedimento">
 
     <div class="form-box">
+
         <h3>Agende sua sessão</h3>
 
+        <p class="subtitulo-formulario">
+            Preencha os dados abaixo para solicitar seu atendimento.
+        </p>
+
         <form id="formAgendamento">
-            <input type="text" id="nome" placeholder="Nome completo" required>
-            <input type="email" id="email" placeholder="E-mail" required>
-            <input type="tel" id="telefone" placeholder="Telefone" required>
 
-            <input type="text" id="procedimentoSelecionado" readonly>
+            <input 
+                type="text" 
+                id="nome" 
+                placeholder="Nome completo" 
+                required
+            >
 
-            <input type="date" id="data" required>
+            <input 
+                type="email" 
+                id="email" 
+                placeholder="E-mail" 
+                required
+            >
+
+            <input 
+                type="tel" 
+                id="telefone" 
+                placeholder="Telefone" 
+                required
+            >
+
+            <input 
+                type="text" 
+                id="procedimentoSelecionado" 
+                placeholder="Procedimento selecionado"
+                readonly
+            >
+
+            <input 
+                type="date" 
+                id="data" 
+                required
+            >
 
             <select id="hora" required>
                 <option value="">Selecione um horário</option>
@@ -51,11 +87,13 @@
             <button type="button" onclick="abrirWhatsApp()" class="btn-whatsapp">
                 Agendar pelo WhatsApp
             </button>
+
         </form>
 
         <div id="mensagemSucesso">
             Obrigado! Seu agendamento foi enviado com sucesso.
         </div>
+
     </div>
 
     <div class="voltar-box">
