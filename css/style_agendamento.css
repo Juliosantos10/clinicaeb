@@ -37,7 +37,7 @@ body {
     font-size: 22px;
 }
 
-/* ÁREA DO FORMULÁRIO */
+/* ÁREA DO CONTEÚDO */
 #conteudoProcedimento {
     min-height: 70vh;
     background:
@@ -59,7 +59,7 @@ body {
     line-height: 1.6;
 }
 
-/* CAIXA DO FORMULÁRIO */
+/* CAIXA */
 .form-box {
     width: 100%;
     max-width: 560px;
@@ -77,7 +77,7 @@ body {
     font-size: 30px;
 }
 
-/* CAMPOS */
+/* CAMPOS ANTIGOS - MANTIDOS CASO PRECISE */
 form input,
 form select {
     width: 100%;
@@ -96,7 +96,8 @@ form select {
 
 /* BOTÕES */
 .btn-agendar,
-.btn-whatsapp {
+.btn-whatsapp,
+.btn-whatsapp-link {
     width: 100%;
     padding: 15px;
     border: none;
@@ -104,6 +105,9 @@ form select {
     font-size: 19px;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
 }
 
 .btn-agendar {
@@ -111,10 +115,16 @@ form select {
     color: #000;
 }
 
-.btn-whatsapp {
+.btn-whatsapp,
+.btn-whatsapp-link {
     background: #25D366;
     color: #fff;
     margin-top: 10px;
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp-link:hover {
+    background: #1ebe5d;
 }
 
 #mensagemSucesso {
@@ -143,169 +153,7 @@ form select {
     font-size: 18px;
 }
 
-/* RESPONSIVO TABLET/CELULAR */
-@media (max-width: 768px) {
-
-    .hero {
-        min-height: auto;
-        padding: 25px 20px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-content p {
-        font-size: 18px;
-    }
-
-    #conteudoProcedimento {
-        min-height: auto;
-        padding: 30px 18px;
-        background-size: 520px;
-    }
-
-    .form-box {
-        max-width: 100%;
-        padding: 25px 20px;
-    }
-
-    .form-box h3 {
-        font-size: 26px;
-    }
-
-    form input,
-    form select {
-        font-size: 17px;
-        padding: 14px;
-    }
-
-    .btn-agendar,
-    .btn-whatsapp {
-        font-size: 18px;
-        padding: 14px;
-    }
-
-    .voltar-box a {
-        font-size: 17px;
-    }
-}
-
-/* CELULAR PEQUENO */
-@media (max-width: 480px) {
-
-    .hero {
-        padding: 20px 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .hero-content p {
-        font-size: 17px;
-    }
-
-    #conteudoProcedimento {
-        padding: 20px 12px;
-        background-size: 430px;
-    }
-
-    .form-box {
-        padding: 22px 16px;
-    }
-
-    .form-box h3 {
-        font-size: 24px;
-    }
-
-    form input,
-    form select {
-        font-size: 16px;
-    }
-
-    .btn-agendar,
-    .btn-whatsapp {
-        font-size: 17px;
-    }
-}
-
-/* =======================
-   RODAPÉ
-======================= */
-
-.rodape {
-    background: #000;
-    color: #d4af37;
-    text-align: center;
-    padding: 35px 20px;
-    border-top: 1px solid rgba(212, 175, 55, 0.4);
-}
-
-.rodape h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.rodape-contatos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.rodape-contatos a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #d4af37;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.rodape-contatos a:hover {
-    color: #ffffff;
-}
-
-.rodape-contatos img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-
-.rodape p {
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-
-    .rodape-contatos {
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .rodape h3 {
-        font-size: 22px;
-    }
-
-    .rodape-contatos a {
-        font-size: 17px;
-    }
-}
-
-/* =======================
-   RODAPÉ
-======================= */
-
+/* RODAPÉ */
 .rodape {
     background: #000;
     color: #d4af37;
@@ -356,7 +204,6 @@ form select {
 
 /* TABLET */
 @media (max-width: 1024px) {
-
     .rodape-contatos {
         gap: 50px;
     }
@@ -366,8 +213,58 @@ form select {
     }
 }
 
-/* CELULAR */
+/* RESPONSIVO TABLET/CELULAR */
 @media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    #conteudoProcedimento {
+        min-height: auto;
+        padding: 30px 18px;
+        background-size: 520px;
+    }
+
+    .form-box {
+        max-width: 100%;
+        padding: 25px 20px;
+    }
+
+    .form-box h3 {
+        font-size: 26px;
+    }
+
+    form input,
+    form select {
+        font-size: 17px;
+        padding: 14px;
+    }
+
+    .btn-agendar,
+    .btn-whatsapp,
+    .btn-whatsapp-link {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .voltar-box a {
+        font-size: 17px;
+    }
 
     .rodape {
         padding: 30px 15px;
@@ -389,5 +286,45 @@ form select {
     .rodape-contatos img {
         width: 28px;
         height: 28px;
+    }
+}
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    #conteudoProcedimento {
+        padding: 20px 12px;
+        background-size: 430px;
+    }
+
+    .form-box {
+        padding: 22px 16px;
+    }
+
+    .form-box h3 {
+        font-size: 24px;
+    }
+
+    form input,
+    form select {
+        font-size: 16px;
+    }
+
+    .btn-agendar,
+    .btn-whatsapp,
+    .btn-whatsapp-link {
+        font-size: 17px;
     }
 }

@@ -1,3 +1,5 @@
+const telefoneWhatsApp = "5531984008626";
+
 const procedimentos = {
     botox: {
         titulo: "Botox",
@@ -21,9 +23,7 @@ const procedimentos = {
 let procedimentoAtual = "";
 
 function mostrarProcedimento(tipo) {
-
     const chave = tipo.toLowerCase();
-
     const conteudo = procedimentos[chave];
 
     if (!conteudo) {
@@ -33,22 +33,19 @@ function mostrarProcedimento(tipo) {
 
     procedimentoAtual = chave;
 
-    document.getElementById("tituloProcedimento").innerText =
-        conteudo.titulo;
+    document.getElementById("tituloProcedimento").innerText = conteudo.titulo;
+    document.getElementById("descricaoProcedimento").innerText = conteudo.descricao;
+    document.getElementById("imagemProcedimento").src = conteudo.imagem;
 
-    document.getElementById("descricaoProcedimento").innerText =
-        conteudo.descricao;
-
-    document.getElementById("imagemProcedimento").src =
-        conteudo.imagem;
+    const mensagem = `Olá! Gostaria de agendar uma avaliação para o procedimento: ${conteudo.titulo}.`;
 
     document.getElementById("btnAgendar").href =
-        `agendamento.html?procedimento=${chave}`;
+        `https://wa.me/${telefoneWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+    document.getElementById("btnAgendar").target = "_blank";
 
     document.querySelector(".procedimentos").style.display = "none";
-
-    document.getElementById("conteudoProcedimento").style.display =
-        "block";
+    document.getElementById("conteudoProcedimento").style.display = "block";
 
     window.scrollTo({
         top: document.getElementById("conteudoProcedimento").offsetTop,
@@ -57,12 +54,8 @@ function mostrarProcedimento(tipo) {
 }
 
 function voltarLista() {
-
-    document.getElementById("conteudoProcedimento").style.display =
-        "none";
-
-    document.querySelector(".procedimentos").style.display =
-        "grid";
+    document.getElementById("conteudoProcedimento").style.display = "none";
+    document.querySelector(".procedimentos").style.display = "grid";
 
     procedimentoAtual = "";
 
@@ -73,15 +66,10 @@ function voltarLista() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-
     const params = new URLSearchParams(window.location.search);
-
     const procedimento = params.get("procedimento");
 
     if (procedimento && procedimentos[procedimento]) {
-
         mostrarProcedimento(procedimento);
-
     }
-
 });

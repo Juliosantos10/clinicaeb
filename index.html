@@ -1,20 +1,239 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Redirecionamento automático -->
-    <meta http-equiv="refresh" content="0; url=html/procedimento.html">
+    <title>
+        EB Saúde e Estética | Botox, Preenchimento Labial e Tratamento Capilar
+    </title>
 
-    <title>EB Saúde e Estética</title>
+    <meta
+        name="description"
+        content="EB Saúde e Estética. Especializada em Botox, Preenchimento Labial, Tratamentos Capilares e cuidados estéticos personalizados. Atendimento humanizado e agendamento via WhatsApp."
+    >
 
-    <script>
-        window.location.href = "html/procedimento.html";
-    </script>
+    <meta
+        name="keywords"
+        content="botox, preenchimento labial, tratamento capilar, estética, saúde e estética, harmonização facial, clínica estética"
+    >
+
+    <meta
+        name="author"
+        content="EB Saúde e Estética"
+    >
+
+    <link rel="stylesheet" href="css/style_procedimento.css">
+
+    <link rel="icon" href="img/logo2.png">
+
 </head>
 <body>
 
-    <p>Redirecionando para os procedimentos...</p>
+<!-- BOTÃO MENU -->
+<button class="menu-toggle" onclick="abrirMenu()">☰</button>
+
+<!-- MENU LATERAL -->
+<nav id="menuLateral" class="menu-lateral">
+    <button class="fechar-menu" onclick="fecharMenu()">×</button>
+
+    <h2>EB Saúde</h2>
+
+    <a href="#inicio" onclick="fecharMenu()">Início</a>
+    <a href="#quem-somos" onclick="fecharMenu()">Quem Somos</a>
+    <a href="#tratamentos" onclick="fecharMenu()">Tratamentos</a>
+    <a href="#blog" onclick="fecharMenu()">Blog</a>
+    <a href="#experiencia" onclick="fecharMenu()">Compartilhe sua Experiência</a>
+    <a href="#antes-depois" onclick="fecharMenu()">Antes e Depois</a>
+    <a href="https://wa.me/5531984008626?text=Olá! Gostaria de agendar uma avaliação na EB Saúde e Estética." target="_blank" onclick="fecharMenu()">Agendamento</a>
+    <a href="#contato" onclick="fecharMenu()">Contato</a>
+</nav>
+
+<div id="overlayMenu" class="overlay-menu" onclick="fecharMenu()"></div>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+
+        <div class="hero-logo">
+            <img src="img/logo2.png" alt="Logo EB Saúde e Estética">
+            <h1>Procedimentos Estéticos</h1>
+            <p>EB Saúde e Estética</p>
+        </div>
+
+        <div class="hero-foto">
+            <img src="img/proprietaria1.png" alt="Proprietária da EB Saúde e Estética">
+        </div>
+
+    </div>
+</section>
+
+<section class="procedimentos" id="tratamentos">
+
+    <div class="card">
+        <img src="img/botox.png" alt="Procedimento Botox">
+        <h3>BOTOX</h3>
+        <p>
+            O Botox é um procedimento estético minimamente invasivo que suaviza rugas e linhas de expressão, proporcionando aparência mais jovem e natural.
+        </p>
+        <a href="#" onclick="mostrarProcedimento('botox'); return false;">Saiba mais</a>
+    </div>
+
+    <div class="card">
+        <img src="img/capilar1.png" alt="Tratamento Capilar">
+        <h3>Tratamento Capilar</h3>
+        <p>
+            Procedimento estético indicado para fortalecimento capilar e combate à queda de cabelo.
+        </p>
+        <a href="#" onclick="mostrarProcedimento('capilar'); return false;">Saiba mais</a>
+    </div>
+
+    <div class="card">
+        <img src="img/labial1.png" alt="Preenchimento Labial">
+        <h3>Preenchimento Labial</h3>
+        <p>
+            Procedimento para realce, volume e harmonização dos lábios.
+        </p>
+        <a href="#" onclick="mostrarProcedimento('labial'); return false;">Saiba mais</a>
+    </div>
+
+</section>
+
+<!-- QUEM SOMOS -->
+<section id="quem-somos" class="secao-extra">
+    <div class="secao-conteudo">
+        <h2>Quem Somos</h2>
+        <p>
+            A EB Saúde e Estética oferece cuidados personalizados voltados para saúde, beleza,
+            autoestima e bem-estar. Nosso atendimento busca unir segurança, acolhimento e
+            resultados naturais para cada cliente.
+        </p>
+    </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="secao-extra secao-blog">
+    <div class="secao-conteudo">
+        <h2>Blog</h2>
+
+        <div class="blog-cards">
+
+            <div class="blog-card">
+                <h3>Cuidados com a pele</h3>
+                <p>
+                    Dicas para manter a pele saudável, hidratada e protegida no dia a dia.
+                </p>
+            </div>
+
+            <div class="blog-card">
+                <h3>Alimentação e estética</h3>
+                <p>
+                    Entenda como uma boa alimentação pode contribuir para a saúde da pele e dos cabelos.
+                </p>
+            </div>
+
+            <div class="blog-card">
+                <h3>Manchas na pele</h3>
+                <p>
+                    Saiba quais cuidados ajudam na prevenção e no tratamento de manchas.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMPARTILHE SUA EXPERIÊNCIA -->
+<section id="experiencia" class="secao-extra">
+    <div class="secao-conteudo">
+        <h2>Compartilhe sua Experiência</h2>
+        <p>
+            Sua opinião é muito importante para nós. Conte como foi sua experiência com a EB Saúde e Estética.
+        </p>
+
+        <a href="https://wa.me/5531984008626" target="_blank" class="btn-extra">
+            Compartilhar pelo WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- ANTES E DEPOIS -->
+<section id="antes-depois" class="secao-extra secao-antes-depois">
+    <div class="secao-conteudo">
+        <h2>Antes e Depois</h2>
+        <p>
+            Em breve, esta área contará com registros autorizados de resultados dos procedimentos.
+        </p>
+
+        <div class="galeria">
+            <div class="galeria-item">Imagem em breve</div>
+            <div class="galeria-item">Imagem em breve</div>
+            <div class="galeria-item">Imagem em breve</div>
+        </div>
+    </div>
+</section>
+
+<section id="conteudoProcedimento" class="detalhes-procedimento" style="display:none;">
+    <div class="detalhes-card">
+        <h2 id="tituloProcedimento"></h2>
+
+        <img id="imagemProcedimento" src="" alt="Procedimento">
+
+        <p id="descricaoProcedimento"></p>
+
+        <a id="btnAgendar" href="#" class="btn-agendar" target="_blank">
+            Agendar pelo WhatsApp
+        </a>
+
+        <button onclick="voltarLista();" class="btn-voltar">
+            ← Voltar
+        </button>
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="rodape" id="contato">
+
+    <h3>EB Saúde e Estética</h3>
+
+    <div class="rodape-contatos">
+
+        <a href="https://www.instagram.com/eb_saudeeestetica" target="_blank">
+            <img src="img/instagram.svg" alt="Instagram">
+            Instagram
+        </a>
+
+        <a href="https://wa.me/5531984008626" target="_blank">
+            <img src="img/whatsapp.svg" alt="WhatsApp">
+            WhatsApp
+        </a>
+
+        <a href="mailto:contato@ebsaude.com">
+            <img src="img/email.svg" alt="E-mail">
+            E-mail
+        </a>
+
+    </div>
+
+    <p>
+        © 2026 EB Saúde e Estética - Todos os direitos reservados.
+    </p>
+
+</footer>
+
+<script src="js/procedimento.js"></script>
+
+<script>
+    function abrirMenu() {
+        document.getElementById("menuLateral").classList.add("ativo");
+        document.getElementById("overlayMenu").classList.add("ativo");
+    }
+
+    function fecharMenu() {
+        document.getElementById("menuLateral").classList.remove("ativo");
+        document.getElementById("overlayMenu").classList.remove("ativo");
+    }
+</script>
 
 </body>
 </html>
