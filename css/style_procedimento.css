@@ -75,6 +75,28 @@ body {
     box-shadow: none;
 }
 
+/* TÍTULO DOS PROCEDIMENTOS */
+
+.titulo-procedimentos {
+    background: #f9f9f9;
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.titulo-procedimentos h2 {
+    font-size: 42px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.titulo-procedimentos p {
+    font-size: 20px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
 /* PROCEDIMENTOS */
 .procedimentos {
     padding: 60px 5%;
@@ -595,6 +617,11 @@ body {
 
 .secao-conteudo h2 {
     text-align: center;
+
+ font-size: 42px;
+    color: #000;
+
+     margin-bottom: 25px;
 }
 
 .secao-conteudo p {
@@ -688,6 +715,14 @@ body {
 
 @media (max-width: 768px) {
 
+    .titulo-procedimentos h2 {
+    font-size: 32px;
+}
+
+.titulo-procedimentos p {
+    font-size: 18px;
+}
+
     .menu-toggle {
         top: 15px;
         left: 15px;
@@ -700,7 +735,7 @@ body {
     }
 
     .secao-conteudo h2 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .secao-conteudo p {
