@@ -115,3 +115,30 @@ document.addEventListener("DOMContentLoaded", function () {
         mostrarProcedimento(procedimento);
     }
 });
+
+/* =======================
+   MODAL DE IMAGEM
+======================= */
+
+const modalImagem = document.getElementById("modalImagem");
+const imagemExpandida = document.getElementById("imagemExpandida");
+
+function abrirImagem(src) {
+
+    imagemExpandida.src = src;
+
+    modalImagem.style.display = "flex";
+}
+
+document.querySelector(".fechar-modal").addEventListener("click", () => {
+
+    modalImagem.style.display = "none";
+});
+
+modalImagem.addEventListener("click", (e) => {
+
+    if (e.target === modalImagem) {
+
+        modalImagem.style.display = "none";
+    }
+});
