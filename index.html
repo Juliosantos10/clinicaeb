@@ -203,6 +203,8 @@
      alt="Aplicação de Enzimas"
      onclick="abrirImagem(this.src)"
      style="cursor:pointer;">
+
+     <h3>Aplicação de Enzimas</h3>
         <p>
             Procedimento estético utilizado como auxílio em protocolos personalizados para gordura localizada e contorno corporal.
         </p>
@@ -232,49 +234,38 @@
 
             <div class="blog-card">
                 <h3>Bioestimuladores de Colágeno: Firmeza e Rejuvenescimento Natural</h3>
+
                 <p>
-                   Com o passar dos anos, nosso organismo reduz naturalmente a produção de colágeno, proteína responsável pela firmeza, sustentação e elasticidade da pele. Como consequência, podem surgir sinais de flacidez, perda de contorno facial e diminuição da qualidade da pele.
-
-Os bioestimuladores de colágeno são procedimentos estéticos que estimulam o organismo a produzir colágeno de forma gradual e natural. Diferente de alguns tratamentos que oferecem resultados imediatos, os bioestimuladores promovem uma melhora progressiva da pele ao longo dos meses.
-
-Entre os principais benefícios estão a melhora da firmeza, redução da flacidez, aumento da sustentação facial e corporal e melhora da textura da pele. Os resultados costumam ser naturais, preservando as características individuais de cada pessoa.
-
-O tratamento é personalizado e indicado após avaliação profissional, considerando as necessidades e objetivos de cada paciente.
-
-Se você busca um rejuvenescimento natural e duradouro, os bioestimuladores de colágeno podem ser uma excelente opção para cuidar da sua beleza e autoestima.
+                    Com o passar dos anos, nosso organismo reduz naturalmente a produção de colágeno, proteína responsável pela firmeza, sustentação e elasticidade da pele.
                 </p>
+
+                <button class="btn-ler-mais" onclick="abrirBlog('bioestimuladores')">
+                    Ler mais
+                </button>
             </div>
 
             <div class="blog-card">
                 <h3>PDRN: Tecnologia Regenerativa para uma Pele Mais Saudável</h3>
+
                 <p>
-                    O PDRN (Polidesoxirribonucleotídeo) é uma das inovações mais promissoras da estética regenerativa. Seu principal objetivo é estimular os processos naturais de reparação e renovação celular, contribuindo para uma pele mais saudável, hidratada e rejuvenescida.
-
-O tratamento auxilia na melhora da qualidade da pele, promovendo hidratação profunda, aumento da luminosidade, melhora da textura e redução dos sinais de envelhecimento. Além disso, pode ser utilizado como complemento em protocolos de rejuvenescimento facial.
-
-Uma das grandes vantagens do PDRN é sua capacidade de estimular a regeneração dos tecidos de forma natural, favorecendo uma aparência mais uniforme e revitalizada.
-
-Os resultados costumam aparecer gradualmente, proporcionando uma melhora progressiva da pele sem alterar a naturalidade dos traços faciais.
-
-A indicação do tratamento deve sempre ser realizada por um profissional qualificado, garantindo segurança e um protocolo adequado para cada paciente.
+                    O PDRN é uma tecnologia regenerativa que auxilia na renovação celular, melhora da hidratação, luminosidade e qualidade da pele.
                 </p>
+
+                <button class="btn-ler-mais" onclick="abrirBlog('pdrn')">
+                    Ler mais
+                </button>
             </div>
 
             <div class="blog-card">
                 <h3>Aplicação de Enzimas: Um Aliado nos Protocolos Corporais</h3>
+
                 <p>
-                    A aplicação de enzimas é um procedimento estético amplamente utilizado como complemento em protocolos personalizados voltados para o contorno corporal e cuidados com a gordura localizada.
-
-O tratamento consiste na aplicação de substâncias específicas em áreas previamente avaliadas pelo profissional. O objetivo é auxiliar nos tratamentos corporais, sempre de acordo com as características e necessidades individuais de cada paciente.
-
-Entre os benefícios frequentemente associados ao procedimento estão o auxílio na redução de medidas, melhora do contorno corporal e complementação de programas de cuidados estéticos.
-
-A aplicação de enzimas não substitui hábitos saudáveis, mas pode atuar como uma importante aliada quando associada a uma alimentação equilibrada, hidratação adequada e prática regular de atividades físicas.
-
-Cada protocolo deve ser elaborado de forma personalizada, garantindo maior segurança e resultados compatíveis com os objetivos do paciente.
-
-Antes de iniciar qualquer tratamento, é fundamental realizar uma avaliação profissional para identificar a melhor estratégia para cada caso.
+                    A aplicação de enzimas é utilizada como complemento em protocolos personalizados para cuidados corporais, contorno e gordura localizada.
                 </p>
+
+                <button class="btn-ler-mais" onclick="abrirBlog('enzimas')">
+                    Ler mais
+                </button>
             </div>
 
         </div>
@@ -394,18 +385,28 @@ Antes de iniciar qualquer tratamento, é fundamental realizar uma avaliação pr
 
     </div>
 
-    <div id="modalImagem" class="modal-imagem">
-    <span class="fechar-modal">&times;</span>
-    <img id="imagemExpandida" src="" alt="Imagem ampliada">
-</div>
-
-
-
     <p>
         © 2026 EB Saúde e Estética - Todos os direitos reservados.
     </p>
 
 </footer>
+    
+     <!-- MODAL DE IMAGEM -->
+<div id="modalImagem" class="modal-imagem">
+    <span class="fechar-modal">&times;</span>
+    <img id="imagemExpandida" src="" alt="Imagem ampliada">
+</div>
+
+<!-- MODAL DO BLOG -->
+<div id="modalBlog" class="modal-blog">
+    <div class="modal-blog-conteudo">
+        <span class="fechar-blog" onclick="fecharBlog()">&times;</span>
+
+        <h2 id="tituloBlog"></h2>
+
+        <p id="textoBlog"></p>
+    </div>
+</div>
 
 <script src="js/procedimento.js"></script>
 
