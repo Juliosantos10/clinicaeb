@@ -38,7 +38,7 @@
 <nav id="menuLateral" class="menu-lateral">
     <button class="fechar-menu" onclick="fecharMenu()">×</button>
 
-    <h2>EB Saúde</h2>
+    <h2>Bem vindo</h2>
 
     <a href="#inicio" onclick="fecharMenu()">Início</a>
     <a href="#quem-somos" onclick="fecharMenu()">Quem Somos</a>
@@ -52,6 +52,9 @@
      onclick="fecharMenu()">
      Agendamento
 </a>
+
+<a href="#localizacao" onclick="fecharMenu()">Localização</a>
+
     <a href="#contato" onclick="fecharMenu()">Contato</a>
 </nav>
 
@@ -329,6 +332,40 @@ Antes de iniciar qualquer tratamento, é fundamental realizar uma avaliação pr
     </div>
 </section>
 
+
+
+<section id="localizacao" class="secao-extra">
+
+    <div class="secao-conteudo">
+
+        <h2>Localização</h2>
+
+        <p class="texto-localizacao">
+    Visite nosso espaço e descubra um ambiente acolhedor, preparado para oferecer os melhores cuidados em saúde e estética.
+</p>
+
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.013528345002!2d-43.95600632591675!3d-19.923834738114305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69742b4404f89%3A0xbb2f9c7d9b10de8c!2sMedplex!5e0!3m2!1spt-BR!2sbr!4v1781801929581!5m2!1spt-BR!2sbr"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="btn-mapa">
+            <a href="https://maps.google.com/?q=Medplex"
+               target="_blank"
+               rel="noopener noreferrer">
+                Como Chegar
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
 <!-- RODAPÉ -->
 <footer class="rodape" id="contato">
 
@@ -346,8 +383,9 @@ Antes de iniciar qualquer tratamento, é fundamental realizar uma avaliação pr
         <a href="https://wa.me/5531984008626"
    target="_blank"
    rel="noopener noreferrer">
-    WhatsApp
-</a>
+           <img src="img/whatsapp.svg" alt="WhatsApp">
+         WhatsApp
+     </a>
 
         <a href="mailto:contato@ebsaude.com">
             <img src="img/email.svg" alt="E-mail">
@@ -360,6 +398,8 @@ Antes de iniciar qualquer tratamento, é fundamental realizar uma avaliação pr
     <span class="fechar-modal">&times;</span>
     <img id="imagemExpandida" src="" alt="Imagem ampliada">
 </div>
+
+
 
     <p>
         © 2026 EB Saúde e Estética - Todos os direitos reservados.
