@@ -1,19 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- OPEN GRAPH -->
     <meta property="og:title" content="EB Saúde e Estética | Botox, Preenchimento Labial, Tratamento Capilar e Estética Facial">
     <meta property="og:description" content="EB Saúde e Estética. Especializada em Botox, Preenchimento Labial, Tratamentos Capilares, Limpeza de Pele, Peeling, Microagulhamento, Skinbooster e cuidados estéticos personalizados.">
     <meta property="og:image" content="img/logo2.png">
 
-    <title>
-        EB Saúde e Estética | Botox, Preenchimento Labial, Tratamento Capilar e Estética Facial
-    </title>
+    <title>EB Saúde e Estética | Botox, Preenchimento Labial, Tratamento Capilar e Estética Facial</title>
 
-     <!-- SEO -->
-
+    <!-- SEO -->
     <meta
         name="description"
         content="EB Saúde e Estética. Especializada em Botox, Preenchimento Labial, Tratamentos Capilares, Limpeza de Pele, Peeling, Microagulhamento, Skinbooster e cuidados estéticos personalizados."
@@ -29,406 +29,659 @@
         content="EB Saúde e Estética"
     >
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style_procedimento.css">
 
+    <!-- FAVICON -->
     <link rel="icon" href="img/logo2.png">
-
 </head>
+
 <body>
 
-<!-- BOTÃO MENU -->
-<button class="menu-toggle" onclick="abrirMenu()">☰</button>
+    <!-- =========================
+         MENU
+    ========================== -->
 
-<!-- MENU LATERAL -->
-<nav id="menuLateral" class="menu-lateral">
-    <button class="fechar-menu" onclick="fecharMenu()">×</button>
+    <!-- BOTÃO MENU -->
+    <button class="menu-toggle" onclick="abrirMenu()">☰</button>
 
-    <h2>Bem vindo</h2>
+    <!-- MENU LATERAL -->
+    <nav id="menuLateral" class="menu-lateral">
+        <button class="fechar-menu" onclick="fecharMenu()">×</button>
 
-    <a href="#inicio" onclick="fecharMenu()">Início</a>
-    <a href="#quem-somos" onclick="fecharMenu()">Quem Somos</a>
-    <a href="#tratamentos" onclick="fecharMenu()">Tratamentos</a>
-    <a href="#blog" onclick="fecharMenu()">Blog</a>
-    <a href="#experiencia" onclick="fecharMenu()">Compartilhe sua Experiência</a>
-    <a href="#antes-depois" onclick="fecharMenu()">Antes e Depois</a>
-    <a href="https://wa.me/5531984008626?text=Olá! Gostaria de agendar uma avaliação na EB Saúde e Estética."
-     target="_blank"
-     rel="noopener noreferrer"
-     onclick="fecharMenu()">
-     Agendamento
-</a>
+        <h2>Bem vindo</h2>
 
-<a href="#localizacao" onclick="fecharMenu()">Localização</a>
+        <a href="#inicio" onclick="fecharMenu()">Início</a>
+        <a href="#quem-somos" onclick="fecharMenu()">Quem Somos</a>
+        <a href="#tratamentos" onclick="fecharMenu()">Tratamentos</a>
+        <a href="#blog" onclick="fecharMenu()">Blog</a>
+        <a href="#experiencia" onclick="fecharMenu()">Compartilhe sua Experiência</a>
+        <a href="#antes-depois" onclick="fecharMenu()">Antes e Depois</a>
 
-    <a href="#contato" onclick="fecharMenu()">Contato</a>
-</nav>
-
-<div id="overlayMenu" class="overlay-menu" onclick="fecharMenu()"></div>
-
-<section class="hero" id="inicio">
-    <div class="hero-content">
-
-        <div class="hero-logo">
-            <img src="img/logo2.png" alt="Logo EB Saúde e Estética">
-            <h1>Procedimentos Estéticos</h1>
-            <p>EB Saúde e Estética</p>
-        </div>
-
-        <div class="hero-foto">
-            <img src="img/proprietaria1.png" alt="Proprietária da EB Saúde e Estética">
-        </div>
-
-    </div>
-</section>
-<section class="titulo-procedimentos">
-
-    <h2>Tratamentos</h2>
-
-    <p>
-        Venha agendar sua consulta e descubra o tratamento ideal para você.
-    </p>
-
-</section>
-<section class="procedimentos" id="tratamentos">
-
-    <div class="card">
-        <img src="img/botox.png"
-     alt="Procedimento Botox"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-
-        <h3>BOTOX</h3>
-        <p>
-            O Botox é um procedimento estético minimamente invasivo que suaviza rugas e linhas de expressão, proporcionando aparência mais jovem e natural.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('botox'); return false;">Saiba mais</a>
-    </div>
-
-    <div class="card">
-        <img src="img/capilar1.png"
-     alt="Tratamento Capilar"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-        <h3>Tratamento Capilar</h3>
-        <p>
-            Procedimento estético indicado para fortalecimento capilar e combate à queda de cabelo.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('capilar'); return false;">Saiba mais</a>
-    </div>
-
-    <div class="card">
-        <img src="img/labial1.png"
-     alt="Preenchimento Labial"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-        <h3>Preenchimento Labial</h3>
-        <p>
-            Procedimento para realce, volume e harmonização dos lábios.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('labial'); return false;">Saiba mais</a>
-    </div>
-
-    <div class="card">
-       <img src="img/limpeza-pele.png"
-     alt="Limpeza de Pele"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-
-        <h3>Limpeza de Pele</h3>
-        <p>
-            Procedimento indicado para remover impurezas, controlar a oleosidade e deixar a pele mais limpa, saudável e iluminada.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('limpeza'); return false;">Saiba mais</a>
-    </div>
-
-    <div class="card">
-       <img src="img/microagulhamento.png"
-     alt="Microagulhamento"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-        <h3>Microagulhamento</h3>
-        <p>
-            Técnica estética que estimula a renovação da pele e a produção de colágeno, auxiliando na melhora da textura e aparência.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('microagulhamento'); return false;">Saiba mais</a>
-    </div>
-
-    <div class="card">
-        <img src="img/peeling-quimico.png"
-     alt="Peeling Químico"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-        <h3>Peeling Químico</h3>
-        <p>
-            Tratamento voltado para renovação da pele, melhora da textura, luminosidade e auxílio no cuidado com manchas superficiais.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('peeling'); return false;">Saiba mais</a>
-    </div>
-
-    <div class="card">
-        <img src="img/bioestimuladores.png"
-     alt="Bioestimuladores"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-
-        <h3>Bioestimuladores de Colágeno</h3>
-        <p>
-            Procedimento que estimula a produção natural de colágeno, contribuindo para firmeza, sustentação e rejuvenescimento da pele.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('bioestimuladores'); return false;">Saiba mais</a>
-    </div>
-
-    <div class="card">
-    <img src="img/pdrn.png"
-     alt="PDRN"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-    <h3>PDRN</h3>
-    <p>
-        Tratamento regenerativo que auxilia na renovação celular, melhora da textura da pele, hidratação e rejuvenescimento facial.
-    </p>
-    <a href="#" onclick="mostrarProcedimento('pdrn'); return false;">Saiba mais</a>
-</div>
-
-    <div class="card">
-        <img src="img/skinbooster.png"
-     alt="Skinbooster"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-        <h3>Skinbooster</h3>
-        <p>
-            Tratamento voltado para hidratação profunda da pele, melhora da elasticidade, viço e qualidade da pele.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('skinbooster'); return false;">Saiba mais</a>
-    </div>
-
-    <div class="card">
-        
-<img src="img/enzimas.png"
-     alt="Aplicação de Enzimas"
-     onclick="abrirImagem(this.src)"
-     style="cursor:pointer;">
-
-     <h3>Aplicação de Enzimas</h3>
-        <p>
-            Procedimento estético utilizado como auxílio em protocolos personalizados para gordura localizada e contorno corporal.
-        </p>
-        <a href="#" onclick="mostrarProcedimento('enzimas'); return false;">Saiba mais</a>
-    </div>
-
-</section>
-
-<!-- QUEM SOMOS -->
-<section id="quem-somos" class="secao-extra">
-    <div class="secao-conteudo">
-        <h2>Quem Somos</h2>
-        <p>
-            A EB Saúde e Estética é especializada em tratamentos estéticos que unem ciência, cuidado e naturalidade. Nosso objetivo é oferecer uma experiência acolhedora e personalizada, ajudando cada cliente a alcançar mais confiança, bem-estar e satisfação com sua própria imagem.
-            Trabalhamos com procedimentos modernos e individualizados, sempre priorizando a segurança, a excelência no atendimento e resultados que valorizem a beleza de forma equilibrada e natural.
-
-        </p>
-    </div>
-</section>
-
-<!-- BLOG -->
-<section id="blog" class="secao-extra secao-blog">
-    <div class="secao-conteudo">
-        <h2>Blog</h2>
-
-        <div class="blog-cards">
-
-            <div class="blog-card">
-                <h3>Bioestimuladores de Colágeno: Firmeza e Rejuvenescimento Natural</h3>
-
-                <p>
-                    Com o passar dos anos, nosso organismo reduz naturalmente a produção de colágeno, proteína responsável pela firmeza, sustentação e elasticidade da pele.
-                </p>
-
-                <button class="btn-ler-mais" onclick="abrirBlog('bioestimuladores')">
-                    Ler mais
-                </button>
-            </div>
-
-            <div class="blog-card">
-                <h3>PDRN: Tecnologia Regenerativa para uma Pele Mais Saudável</h3>
-
-                <p>
-                    O PDRN é uma tecnologia regenerativa que auxilia na renovação celular, melhora da hidratação, luminosidade e qualidade da pele.
-                </p>
-
-                <button class="btn-ler-mais" onclick="abrirBlog('pdrn')">
-                    Ler mais
-                </button>
-            </div>
-
-            <div class="blog-card">
-                <h3>Aplicação de Enzimas: Um Aliado nos Protocolos Corporais</h3>
-
-                <p>
-                    A aplicação de enzimas é utilizada como complemento em protocolos personalizados para cuidados corporais, contorno e gordura localizada.
-                </p>
-
-                <button class="btn-ler-mais" onclick="abrirBlog('enzimas')">
-                    Ler mais
-                </button>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- COMPARTILHE SUA EXPERIÊNCIA -->
-<section id="experiencia" class="secao-extra">
-    <div class="secao-conteudo">
-        <h2>Compartilhe sua Experiência</h2>
-
-        <p>
-            Sua opinião é muito importante para nós. Conte como foi sua experiência com a EB Saúde e Estética.
-        </p>
-
-        <a href="https://wa.me/5531984008626?text=Minha%20experi%C3%AAncia%20com%20a%20Eliane%20Bernardes%20foi..."
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn-extra">
-            Compartilhar pelo WhatsApp
-        </a>
-    </div>
-</section>
-
-<!-- ANTES E DEPOIS -->
-<section id="antes-depois" class="secao-extra secao-antes-depois">
-    <div class="secao-conteudo">
-        <h2>Antes e Depois</h2>
-        <p>
-            Em breve, esta área contará com registros autorizados de resultados dos procedimentos.
-        </p>
-
-        <div class="galeria">
-            <div class="galeria-item">Imagem em breve</div>
-            <div class="galeria-item">Imagem em breve</div>
-            <div class="galeria-item">Imagem em breve</div>
-        </div>
-    </div>
-</section>
-
-<section id="conteudoProcedimento" class="detalhes-procedimento" style="display:none;">
-    <div class="detalhes-card">
-        <h2 id="tituloProcedimento"></h2>
-
-        <img id="imagemProcedimento" src="" alt="Procedimento">
-
-        <p id="descricaoProcedimento"></p>
-
-        <a id="btnAgendar" href="#" class="btn-agendar" target="_blank">
-            Agendar pelo WhatsApp
+        <a
+            href="https://wa.me/5531984008626?text=Olá! Gostaria de agendar uma avaliação na EB Saúde e Estética."
+            target="_blank"
+            rel="noopener noreferrer"
+            onclick="fecharMenu()"
+        >
+            Agendamento
         </a>
 
-        <button onclick="voltarLista();" class="btn-voltar">
-            ← Voltar
-        </button>
-    </div>
-</section>
+        <a href="#localizacao" onclick="fecharMenu()">Localização</a>
+        <a href="#contato" onclick="fecharMenu()">Contato</a>
+    </nav>
+
+    <!-- OVERLAY DO MENU -->
+    <div
+        id="overlayMenu"
+        class="overlay-menu"
+        onclick="fecharMenu()"
+    ></div>
 
 
+    <!-- =========================
+         HERO / INÍCIO
+    ========================== -->
 
-<section id="localizacao" class="secao-extra">
+    <section class="hero" id="inicio">
+        <div class="hero-content">
 
-    <div class="secao-conteudo">
+            <div class="hero-logo">
+                <img src="img/logo2.png" alt="Logo EB Saúde e Estética">
+                <h1>Procedimentos Estéticos</h1>
+                <p>EB Saúde e Estética</p>
+            </div>
 
-        <h2>Localização</h2>
+            <div class="hero-foto">
+                <img
+                    src="img/proprietaria1.png"
+                    alt="Proprietária da EB Saúde e Estética"
+                >
+            </div>
 
-        <p class="texto-localizacao">
-    Visite nosso espaço e descubra um ambiente acolhedor, preparado para oferecer os melhores cuidados em saúde e estética.
-</p>
-
-        <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.013528345002!2d-43.95600632591675!3d-19.923834738114305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69742b4404f89%3A0xbb2f9c7d9b10de8c!2sMedplex!5e0!3m2!1spt-BR!2sbr!4v1781801929581!5m2!1spt-BR!2sbr"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
         </div>
+    </section>
 
-        <div class="btn-mapa">
-            <a href="https://maps.google.com/?q=Medplex"
-               target="_blank"
-               rel="noopener noreferrer">
-                Como Chegar
+
+    <!-- =========================
+         TRATAMENTOS
+    ========================== -->
+
+    <section class="titulo-procedimentos">
+        <h2>Tratamentos</h2>
+
+        <p>
+            Venha agendar sua consulta e descubra o tratamento ideal para você.
+        </p>
+    </section>
+
+    <section class="procedimentos" id="tratamentos">
+
+        <!-- BOTOX -->
+        <div class="card">
+            <img
+                src="img/botox.png"
+                alt="Procedimento Botox"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>BOTOX</h3>
+
+            <p>
+                O Botox é um procedimento estético minimamente invasivo que suaviza rugas e linhas de expressão, proporcionando aparência mais jovem e natural.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('botox'); return false;"
+            >
+                Saiba mais
             </a>
         </div>
 
+
+        <!-- TRATAMENTO CAPILAR -->
+        <div class="card">
+            <img
+                src="img/capilar1.png"
+                alt="Tratamento Capilar"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>Tratamento Capilar</h3>
+
+            <p>
+                Procedimento estético indicado para fortalecimento capilar e combate à queda de cabelo.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('capilar'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+
+        <!-- PREENCHIMENTO LABIAL -->
+        <div class="card">
+            <img
+                src="img/labial1.png"
+                alt="Preenchimento Labial"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>Preenchimento Labial</h3>
+
+            <p>
+                Procedimento para realce, volume e harmonização dos lábios.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('labial'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+
+        <!-- LIMPEZA DE PELE -->
+        <div class="card">
+            <img
+                src="img/limpeza-pele.png"
+                alt="Limpeza de Pele"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>Limpeza de Pele</h3>
+
+            <p>
+                Procedimento indicado para remover impurezas, controlar a oleosidade e deixar a pele mais limpa, saudável e iluminada.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('limpeza'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+
+        <!-- MICROAGULHAMENTO -->
+        <div class="card">
+            <img
+                src="img/microagulhamento.png"
+                alt="Microagulhamento"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>Microagulhamento</h3>
+
+            <p>
+                Técnica estética que estimula a renovação da pele e a produção de colágeno, auxiliando na melhora da textura e aparência.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('microagulhamento'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+
+        <!-- PEELING QUÍMICO -->
+        <div class="card">
+            <img
+                src="img/peeling-quimico.png"
+                alt="Peeling Químico"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>Peeling Químico</h3>
+
+            <p>
+                Tratamento voltado para renovação da pele, melhora da textura, luminosidade e auxílio no cuidado com manchas superficiais.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('peeling'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+
+        <!-- BIOESTIMULADORES -->
+        <div class="card">
+            <img
+                src="img/bioestimuladores.png"
+                alt="Bioestimuladores"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>Bioestimuladores de Colágeno</h3>
+
+            <p>
+                Procedimento que estimula a produção natural de colágeno, contribuindo para firmeza, sustentação e rejuvenescimento da pele.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('bioestimuladores'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+
+        <!-- PDRN -->
+        <div class="card">
+            <img
+                src="img/pdrn.png"
+                alt="PDRN"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>PDRN</h3>
+
+            <p>
+                Tratamento regenerativo que auxilia na renovação celular, melhora da textura da pele, hidratação e rejuvenescimento facial.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('pdrn'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+
+        <!-- SKINBOOSTER -->
+        <div class="card">
+            <img
+                src="img/skinbooster.png"
+                alt="Skinbooster"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>Skinbooster</h3>
+
+            <p>
+                Tratamento voltado para hidratação profunda da pele, melhora da elasticidade, viço e qualidade da pele.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('skinbooster'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+
+        <!-- APLICAÇÃO DE ENZIMAS -->
+        <div class="card">
+            <img
+                src="img/enzimas.png"
+                alt="Aplicação de Enzimas"
+                onclick="abrirImagem(this.src)"
+                style="cursor:pointer;"
+            >
+
+            <h3>Aplicação de Enzimas</h3>
+
+            <p>
+                Procedimento estético utilizado como auxílio em protocolos personalizados para gordura localizada e contorno corporal.
+            </p>
+
+            <a
+                href="#"
+                onclick="mostrarProcedimento('enzimas'); return false;"
+            >
+                Saiba mais
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUEM SOMOS
+    ========================== -->
+
+    <section id="quem-somos" class="secao-extra">
+        <div class="secao-conteudo">
+
+            <h2>Quem Somos</h2>
+
+            <p>
+                A EB Saúde e Estética é especializada em tratamentos estéticos que unem ciência, cuidado e naturalidade. Nosso objetivo é oferecer uma experiência acolhedora e personalizada, ajudando cada cliente a alcançar mais confiança, bem-estar e satisfação com sua própria imagem.
+                Trabalhamos com procedimentos modernos e individualizados, sempre priorizando a segurança, a excelência no atendimento e resultados que valorizem a beleza de forma equilibrada e natural.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         BLOG
+    ========================== -->
+
+    <section id="blog" class="secao-extra secao-blog">
+        <div class="secao-conteudo">
+
+            <h2>Blog</h2>
+
+            <div class="blog-cards">
+
+                <!-- BIOESTIMULADORES -->
+                <div class="blog-card">
+                    <h3>
+                        Bioestimuladores de Colágeno: Firmeza e Rejuvenescimento Natural
+                    </h3>
+
+                    <p>
+                        Com o passar dos anos, nosso organismo reduz naturalmente a produção de colágeno, proteína responsável pela firmeza, sustentação e elasticidade da pele.
+                    </p>
+
+                    <button
+                        class="btn-ler-mais"
+                        onclick="abrirBlog('bioestimuladores')"
+                    >
+                        Ler mais
+                    </button>
+                </div>
+
+
+                <!-- PDRN -->
+                <div class="blog-card">
+                    <h3>
+                        PDRN: Tecnologia Regenerativa para uma Pele Mais Saudável
+                    </h3>
+
+                    <p>
+                        O PDRN é uma tecnologia regenerativa que auxilia na renovação celular, melhora da hidratação, luminosidade e qualidade da pele.
+                    </p>
+
+                    <button
+                        class="btn-ler-mais"
+                        onclick="abrirBlog('pdrn')"
+                    >
+                        Ler mais
+                    </button>
+                </div>
+
+
+                <!-- ENZIMAS -->
+                <div class="blog-card">
+                    <h3>
+                        Aplicação de Enzimas: Um Aliado nos Protocolos Corporais
+                    </h3>
+
+                    <p>
+                        A aplicação de enzimas é utilizada como complemento em protocolos personalizados para cuidados corporais, contorno e gordura localizada.
+                    </p>
+
+                    <button
+                        class="btn-ler-mais"
+                        onclick="abrirBlog('enzimas')"
+                    >
+                        Ler mais
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         COMPARTILHE SUA EXPERIÊNCIA
+    ========================== -->
+
+    <section id="experiencia" class="secao-extra">
+        <div class="secao-conteudo">
+
+            <h2>Compartilhe sua Experiência</h2>
+
+            <p>
+                Sua opinião é muito importante para nós. Conte como foi sua experiência com a EB Saúde e Estética.
+            </p>
+
+            <a
+                href="https://wa.me/5531984008626?text=Minha%20experi%C3%AAncia%20com%20a%20Eliane%20Bernardes%20foi..."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-extra"
+            >
+                Compartilhar pelo WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         ANTES E DEPOIS
+    ========================== -->
+
+    <section
+        id="antes-depois"
+        class="secao-extra secao-antes-depois"
+    >
+        <div class="secao-conteudo">
+
+            <h2>Antes e Depois</h2>
+
+            <p>
+                Em breve, esta área contará com registros autorizados de resultados dos procedimentos.
+            </p>
+
+            <div class="galeria">
+                <div class="galeria-item">Imagem em breve</div>
+                <div class="galeria-item">Imagem em breve</div>
+                <div class="galeria-item">Imagem em breve</div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         DETALHES DO PROCEDIMENTO
+    ========================== -->
+
+    <section
+        id="conteudoProcedimento"
+        class="detalhes-procedimento"
+        style="display:none;"
+    >
+        <div class="detalhes-card">
+
+            <h2 id="tituloProcedimento"></h2>
+
+            <img
+                id="imagemProcedimento"
+                src=""
+                alt="Procedimento"
+            >
+
+            <p id="descricaoProcedimento"></p>
+
+            <a
+                id="btnAgendar"
+                href="#"
+                class="btn-agendar"
+                target="_blank"
+            >
+                Agendar pelo WhatsApp
+            </a>
+
+            <button
+                onclick="voltarLista();"
+                class="btn-voltar"
+            >
+                ← Voltar
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         LOCALIZAÇÃO
+    ========================== -->
+
+    <section id="localizacao" class="secao-extra">
+        <div class="secao-conteudo">
+
+            <h2>Localização</h2>
+
+            <p class="texto-localizacao">
+                Visite nosso espaço e descubra um ambiente acolhedor, preparado para oferecer os melhores cuidados em saúde e estética.
+            </p>
+
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.013528345002!2d-43.95600632591675!3d-19.923834738114305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69742b4404f89%3A0xbb2f9c7d9b10de8c!2sMedplex!5e0!3m2!1spt-BR!2sbr!4v1781801929581!5m2!1spt-BR!2sbr"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                ></iframe>
+            </div>
+
+            <div class="btn-mapa">
+                <a
+                    href="https://maps.google.com/?q=Medplex"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Como Chegar
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="rodape" id="contato">
+
+        <h3>EB Saúde e Estética</h3>
+
+        <div class="rodape-contatos">
+
+            <!-- INSTAGRAM -->
+            <a
+                href="https://www.instagram.com/eb_saudeeestetica"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/instagram.svg" alt="Instagram">
+                Instagram
+            </a>
+
+            <!-- WHATSAPP -->
+            <a
+                href="https://wa.me/5531984008626"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/whatsapp.svg" alt="WhatsApp">
+                WhatsApp
+            </a>
+
+            <!-- E-MAIL -->
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=eab.enf@gmail.com&su=Contato%20pelo%20site%20EB%20Sa%C3%BAde%20%26%20Est%C3%A9tica&body=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos%20da%20EB%20Sa%C3%BAde%20%26%20Est%C3%A9tica."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="img/email.svg" alt="E-mail">
+                E-mail
+            </a>
+
+        </div>
+
+        <p>
+            © 2026 EB Saúde e Estética - Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         MODAIS
+    ========================== -->
+
+    <!-- MODAL DE IMAGEM -->
+    <div id="modalImagem" class="modal-imagem">
+        <span class="fechar-modal">&times;</span>
+
+        <img
+            id="imagemExpandida"
+            src=""
+            alt="Imagem ampliada"
+        >
     </div>
 
-</section>
 
-<!-- RODAPÉ -->
-<footer class="rodape" id="contato">
+    <!-- MODAL DO BLOG -->
+    <div id="modalBlog" class="modal-blog">
+        <div class="modal-blog-conteudo">
 
-    <h3>EB Saúde e Estética</h3>
+            <span
+                class="fechar-blog"
+                onclick="fecharBlog()"
+            >
+                &times;
+            </span>
 
-    <div class="rodape-contatos">
+            <h2 id="tituloBlog"></h2>
 
-        <a href="https://www.instagram.com/eb_saudeeestetica"
-   target="_blank"
-   rel="noopener noreferrer">
-            <img src="img/instagram.svg" alt="Instagram">
-            Instagram
-        </a>
+            <p id="textoBlog"></p>
 
-        <a href="https://wa.me/5531984008626"
-   target="_blank"
-   rel="noopener noreferrer">
-           <img src="img/whatsapp.svg" alt="WhatsApp">
-         WhatsApp
-     </a>
-
-       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=eab.enf@gmail.com&su=Contato%20pelo%20site%20EB%20Sa%C3%BAde%20%26%20Est%C3%A9tica&body=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos%20da%20EB%20Sa%C3%BAde%20%26%20Est%C3%A9tica."
-   target="_blank"
-   rel="noopener noreferrer">
-    <img src="img/email.svg" alt="E-mail">
-    E-mail
-</a>
-
+        </div>
     </div>
 
-    <p>
-        © 2026 EB Saúde e Estética - Todos os direitos reservados.
-    </p>
 
-</footer>
-    
-     <!-- MODAL DE IMAGEM -->
-<div id="modalImagem" class="modal-imagem">
-    <span class="fechar-modal">&times;</span>
-    <img id="imagemExpandida" src="" alt="Imagem ampliada">
-</div>
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
 
-<!-- MODAL DO BLOG -->
-<div id="modalBlog" class="modal-blog">
-    <div class="modal-blog-conteudo">
-        <span class="fechar-blog" onclick="fecharBlog()">&times;</span>
+    <script src="js/procedimento.js"></script>
 
-        <h2 id="tituloBlog"></h2>
+    <script>
+        function abrirMenu() {
+            document.getElementById("menuLateral").classList.add("ativo");
+            document.getElementById("overlayMenu").classList.add("ativo");
+        }
 
-        <p id="textoBlog"></p>
-    </div>
-</div>
-
-<script src="js/procedimento.js"></script>
-
-<script>
-    function abrirMenu() {
-        document.getElementById("menuLateral").classList.add("ativo");
-        document.getElementById("overlayMenu").classList.add("ativo");
-    }
-
-    function fecharMenu() {
-        document.getElementById("menuLateral").classList.remove("ativo");
-        document.getElementById("overlayMenu").classList.remove("ativo");
-    }
-</script>
+        function fecharMenu() {
+            document.getElementById("menuLateral").classList.remove("ativo");
+            document.getElementById("overlayMenu").classList.remove("ativo");
+        }
+    </script>
 
 </body>
 </html>
+```
