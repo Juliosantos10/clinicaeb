@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -41,12 +41,22 @@
          MENU
     ========================== -->
 
-    <!-- BOTÃO MENU -->
-    <button class="menu-toggle" onclick="abrirMenu()">☰</button>
+    <header>
 
-    <!-- MENU LATERAL -->
-    <nav id="menuLateral" class="menu-lateral">
-        <button class="fechar-menu" onclick="fecharMenu()">×</button>
+    <!-- BOTÃO MENU -->
+<button class="menu-toggle" onclick="abrirMenu()">☰</button>
+
+<!-- MENU LATERAL -->
+<nav id="menuLateral" class="menu-lateral">
+
+    <button
+        type="button"
+        class="fechar-menu"
+        aria-label="Fechar menu"
+        onclick="fecharMenu()"
+    >
+        ×
+    </button>
 
         <h2>Bem vindo</h2>
 
@@ -70,6 +80,8 @@
         <a href="#contato" onclick="fecharMenu()">Contato</a>
     </nav>
 
+    </header>
+
     <!-- OVERLAY DO MENU -->
     <div
         id="overlayMenu"
@@ -81,6 +93,8 @@
     <!-- =========================
          HERO / INÍCIO
     ========================== -->
+
+    <main>
 
     <section class="hero" id="inicio">
         <div class="hero-content">
@@ -100,8 +114,6 @@
 
         </div>
     </section>
-
-
     <!-- =========================
          TRATAMENTOS
     ========================== -->
@@ -116,8 +128,8 @@
 
     <section class="procedimentos" id="tratamentos">
 
-        <!-- BOTOX -->
-        <div class="card">
+        <!-- BOTOX-->
+        <article class="card">
             <img
                 src="img/botox.png"
                 alt="Procedimento Botox"
@@ -125,7 +137,7 @@
                 style="cursor:pointer;"
             >
 
-            <h3>BOTOX</h3>
+            <h3>Botox</h3>
 
             <p>
                 O Botox é um procedimento estético minimamente invasivo que suaviza rugas e linhas de expressão, proporcionando aparência mais jovem e natural.
@@ -137,12 +149,12 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- TRATAMENTO CAPILAR -->
-        <div class="card">
-            <img
+       <article class="card">
+          <img
                 src="img/capilar1.png"
                 alt="Tratamento Capilar"
                 onclick="abrirImagem(this.src)"
@@ -161,11 +173,11 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- PREENCHIMENTO LABIAL -->
-        <div class="card">
+        <article class="card">
             <img
                 src="img/labial1.png"
                 alt="Preenchimento Labial"
@@ -185,11 +197,11 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- LIMPEZA DE PELE -->
-        <div class="card">
+        <article class="card">
             <img
                 src="img/limpeza-pele.png"
                 alt="Limpeza de Pele"
@@ -209,11 +221,11 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- MICROAGULHAMENTO -->
-        <div class="card">
+        <article class="card">
             <img
                 src="img/microagulhamento.png"
                 alt="Microagulhamento"
@@ -233,11 +245,11 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- PEELING QUÍMICO -->
-        <div class="card">
+        <article class="card">
             <img
                 src="img/peeling-quimico.png"
                 alt="Peeling Químico"
@@ -257,11 +269,11 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- BIOESTIMULADORES -->
-        <div class="card">
+        <article class="card">
             <img
                 src="img/bioestimuladores.png"
                 alt="Bioestimuladores"
@@ -281,11 +293,11 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- PDRN -->
-        <div class="card">
+        <article class="card">
             <img
                 src="img/pdrn.png"
                 alt="PDRN"
@@ -305,11 +317,11 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- SKINBOOSTER -->
-        <div class="card">
+        <article class="card">
             <img
                 src="img/skinbooster.png"
                 alt="Skinbooster"
@@ -329,11 +341,11 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
 
         <!-- APLICAÇÃO DE ENZIMAS -->
-        <div class="card">
+        <article class="card">
             <img
                 src="img/enzimas.png"
                 alt="Aplicação de Enzimas"
@@ -353,7 +365,7 @@
             >
                 Saiba mais
             </a>
-        </div>
+        </article>
 
     </section>
 
@@ -388,7 +400,7 @@
             <div class="blog-cards">
 
                 <!-- BIOESTIMULADORES -->
-                <div class="blog-card">
+               <article class="blog-card">
                     <h3>
                         Bioestimuladores de Colágeno: Firmeza e Rejuvenescimento Natural
                     </h3>
@@ -403,11 +415,11 @@
                     >
                         Ler mais
                     </button>
-                </div>
+                </article>
 
 
                 <!-- PDRN -->
-                <div class="blog-card">
+                <article class="blog-card">
                     <h3>
                         PDRN: Tecnologia Regenerativa para uma Pele Mais Saudável
                     </h3>
@@ -422,11 +434,11 @@
                     >
                         Ler mais
                     </button>
-                </div>
+                </article>
 
 
                 <!-- ENZIMAS -->
-                <div class="blog-card">
+                <article class="blog-card">
                     <h3>
                         Aplicação de Enzimas: Um Aliado nos Protocolos Corporais
                     </h3>
@@ -441,7 +453,7 @@
                     >
                         Ler mais
                     </button>
-                </div>
+                </article>
 
             </div>
         </div>
@@ -449,7 +461,7 @@
 
 
     <!-- =========================
-         COMPARTILHE SUA EXPERIÊNCIA
+    COMPARTILHE SUA EXPERIÊNCIA
     ========================== -->
 
     <section id="experiencia" class="secao-extra">
@@ -531,11 +543,12 @@
             </a>
 
             <button
-                onclick="voltarLista();"
-                class="btn-voltar"
-            >
-                ← Voltar
-            </button>
+    type="button"
+    onclick="voltarLista();"
+    class="btn-voltar"
+>
+    ← Voltar
+</button>
 
         </div>
     </section>
@@ -578,9 +591,11 @@
         </div>
     </section>
 
+    </main>
+
 
     <!-- =========================
-         RODAPÉ
+         RODAPE
     ========================== -->
 
     <footer class="rodape" id="contato">
