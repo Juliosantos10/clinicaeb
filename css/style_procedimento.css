@@ -285,7 +285,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
-
 .menu-toggle:hover {
     background: #c49b20;
 }
@@ -300,6 +299,7 @@ body {
     padding: 30px 20px;
     z-index: 1002;
     transition: 0.3s ease;
+    overflow-y: auto;
 }
 
 .menu-lateral.ativo {
@@ -736,11 +736,13 @@ body {
     }
 
     .btn-agendar,
-    .btn-voltar {
-        width: 100%;
-        display: block;
-        font-size: 18px;
-    }
+.btn-voltar {
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 0;
+}
 
     .rodape {
         padding: 15px 10px;
@@ -830,5 +832,33 @@ body {
 
     .mapa iframe {
         height: 350px;
+    }
+}
+
+/* =========================================
+   ACESSIBILIDADE - NAVEGAÇÃO POR TECLADO
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #d4af37;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   ACESSIBILIDADE - MOVIMENTO REDUZIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
