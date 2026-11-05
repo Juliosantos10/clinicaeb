@@ -444,20 +444,35 @@ body {
 
 /* BOTÃO EXTRA */
 .btn-extra {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: fit-content;
     margin: 25px auto 0 auto;
-    background: #43f104;
+    background: #0b6b3a;
     color: #ffffff;
     padding: 14px 28px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.btn-extra:hover {
+.btn-extra img {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+}
+
+.btn-extra:hover,
+.btn-extra:focus-visible {
+    background: #08552e;
     transform: translateY(-2px);
+}
+
+.btn-extra:focus-visible {
+    outline: 3px solid #d4af37;
+    outline-offset: 3px;
 }
 
 /* GALERIA */
