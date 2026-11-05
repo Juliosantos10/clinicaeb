@@ -880,3 +880,90 @@ button:focus-visible {
 .card img {
     cursor: pointer;
 }
+
+/* RODAPÉ - ENDEREÇO E HORÁRIO */
+.rodape-info {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin: 8px 0 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.rodape-info address {
+    font-style: normal;
+}
+
+.rodape-info strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.rodape-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.rodape-info a:hover {
+    color: #d4af37;
+}
+
+.rodape .rodape-horario {
+    font-size: 14px;
+    color: #333;
+}
+
+/* BOTÃO FLUTUANTE DO WHATSAPP */
+.whatsapp-flutuante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-flutuante:hover,
+.whatsapp-flutuante:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.whatsapp-flutuante img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+    .rodape-info {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .rodape {
+        padding-bottom: 90px;
+    }
+
+    .whatsapp-flutuante {
+        right: 16px;
+        bottom: 16px;
+        width: 54px;
+        height: 54px;
+    }
+
+    .whatsapp-flutuante img {
+        width: 28px;
+        height: 28px;
+    }
+}
