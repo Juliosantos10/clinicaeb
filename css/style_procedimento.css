@@ -862,3 +862,21 @@ button:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* BOTÕES DE FECHAR (MODAIS) E IMAGENS CLICÁVEIS */
+.fechar-modal,
+.fechar-blog {
+    background: transparent;
+    border: none;
+    line-height: 1;
+    color: inherit;
+    font-family: inherit;
+}
+
+.fechar-modal {
+    color: white;
+}
+
+.card img {
+    cursor: pointer;
+}

@@ -44,7 +44,14 @@
     <header>
 
     <!-- BOTÃO MENU -->
-<button class="menu-toggle" onclick="abrirMenu()">☰</button>
+<button
+    type="button"
+    class="menu-toggle"
+    aria-label="Abrir menu"
+    aria-controls="menuLateral"
+    aria-expanded="false"
+    onclick="abrirMenu()"
+>☰</button>
 
 <!-- MENU LATERAL -->
 <nav id="menuLateral" class="menu-lateral">
@@ -60,24 +67,23 @@
 
         <h2>Bem vindo</h2>
 
-        <a href="#inicio" onclick="fecharMenu()">Início</a>
-        <a href="#quem-somos" onclick="fecharMenu()">Quem Somos</a>
-        <a href="#tratamentos" onclick="fecharMenu()">Tratamentos</a>
-        <a href="#blog" onclick="fecharMenu()">Blog</a>
-        <a href="#experiencia" onclick="fecharMenu()">Compartilhe sua Experiência</a>
-        <a href="#antes-depois" onclick="fecharMenu()">Antes e Depois</a>
+        <a href="#inicio">Início</a>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#blog">Blog</a>
+        <a href="#experiencia">Compartilhe sua Experiência</a>
+        <a href="#antes-depois">Antes e Depois</a>
 
         <a
-            href="https://wa.me/5531984008626?text=Olá! Gostaria de agendar uma avaliação na EB Saúde e Estética."
+            href="https://wa.me/5531984008626?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20EB%20Sa%C3%BAde%20e%20Est%C3%A9tica."
             target="_blank"
             rel="noopener noreferrer"
-            onclick="fecharMenu()"
         >
             Agendamento
         </a>
 
-        <a href="#localizacao" onclick="fecharMenu()">Localização</a>
-        <a href="#contato" onclick="fecharMenu()">Contato</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#contato">Contato</a>
     </nav>
 
     </header>
@@ -133,8 +139,7 @@
             <img
                 src="img/botox.webp"
                 alt="Procedimento Botox"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Botox</h3>
@@ -157,8 +162,7 @@
           <img
                 src="img/capilar1.webp"
                 alt="Tratamento Capilar"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Tratamento Capilar</h3>
@@ -181,8 +185,7 @@
             <img
                 src="img/labial1.webp"
                 alt="Preenchimento Labial"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Preenchimento Labial</h3>
@@ -205,8 +208,7 @@
             <img
                 src="img/limpeza-pele.webp"
                 alt="Limpeza de Pele"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Limpeza de Pele</h3>
@@ -229,8 +231,7 @@
             <img
                 src="img/microagulhamento.webp"
                 alt="Microagulhamento"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Microagulhamento</h3>
@@ -253,8 +254,7 @@
             <img
                 src="img/peeling-quimico.webp"
                 alt="Peeling Químico"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Peeling Químico</h3>
@@ -277,8 +277,7 @@
             <img
                 src="img/bioestimuladores.webp"
                 alt="Bioestimuladores"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Bioestimuladores de Colágeno</h3>
@@ -301,8 +300,7 @@
             <img
                 src="img/pdrn.webp"
                 alt="PDRN"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>PDRN</h3>
@@ -325,8 +323,7 @@
             <img
                 src="img/skinbooster.webp"
                 alt="Skinbooster"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Skinbooster</h3>
@@ -349,8 +346,7 @@
             <img
                 src="img/enzimas.webp"
                 alt="Aplicação de Enzimas"
-                onclick="abrirImagem(this.src)"
-                style="cursor:pointer;"
+                loading="lazy"
             >
 
             <h3>Aplicação de Enzimas</h3>
@@ -368,6 +364,49 @@
         </article>
 
     </section>
+
+    <!-- =========================
+         DETALHES DO PROCEDIMENTO
+    ========================== -->
+
+    <section
+        id="conteudoProcedimento"
+        class="detalhes-procedimento"
+        style="display:none;"
+    >
+        <div class="detalhes-card">
+
+            <h2 id="tituloProcedimento"></h2>
+
+            <img
+                id="imagemProcedimento"
+                src=""
+                alt=""
+            >
+
+            <p id="descricaoProcedimento"></p>
+
+            <a
+                id="btnAgendar"
+                href="#"
+                class="btn-agendar"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Agendar pelo WhatsApp
+            </a>
+
+            <button
+                type="button"
+                onclick="voltarLista();"
+                class="btn-voltar"
+            >
+                ← Voltar
+            </button>
+
+        </div>
+    </section>
+
 
 
     <!-- =========================
@@ -513,48 +552,6 @@
 
 
     <!-- =========================
-         DETALHES DO PROCEDIMENTO
-    ========================== -->
-
-    <section
-        id="conteudoProcedimento"
-        class="detalhes-procedimento"
-        style="display:none;"
-    >
-        <div class="detalhes-card">
-
-            <h2 id="tituloProcedimento"></h2>
-
-            <img
-                id="imagemProcedimento"
-                src=""
-                alt="Procedimento"
-            >
-
-            <p id="descricaoProcedimento"></p>
-
-            <a
-                id="btnAgendar"
-                href="#"
-                class="btn-agendar"
-                target="_blank"
-            >
-                Agendar pelo WhatsApp
-            </a>
-
-            <button
-    type="button"
-    onclick="voltarLista();"
-    class="btn-voltar"
->
-    ← Voltar
-</button>
-
-        </div>
-    </section>
-
-
-    <!-- =========================
          LOCALIZAÇÃO
     ========================== -->
 
@@ -569,6 +566,7 @@
 
             <div class="mapa">
                 <iframe
+                    title="Mapa da localização da EB Saúde e Estética no Medplex"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.013528345002!2d-43.95600632591675!3d-19.923834738114305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69742b4404f89%3A0xbb2f9c7d9b10de8c!2sMedplex!5e0!3m2!1spt-BR!2sbr!4v1781801929581!5m2!1spt-BR!2sbr"
                     width="600"
                     height="450"
@@ -610,7 +608,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img src="img/instagram.svg" alt="Instagram">
+                <img src="img/instagram.svg" alt="">
                 Instagram
             </a>
 
@@ -620,17 +618,15 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img src="img/whatsapp.svg" alt="WhatsApp">
+                <img src="img/whatsapp.svg" alt="">
                 WhatsApp
             </a>
 
             <!-- E-MAIL -->
             <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=eab.enf@gmail.com&su=Contato%20pelo%20site%20EB%20Sa%C3%BAde%20%26%20Est%C3%A9tica&body=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos%20da%20EB%20Sa%C3%BAde%20%26%20Est%C3%A9tica."
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:eab.enf@gmail.com?subject=Contato%20pelo%20site%20EB%20Sa%C3%BAde%20%26%20Est%C3%A9tica&body=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos%20da%20EB%20Sa%C3%BAde%20%26%20Est%C3%A9tica."
             >
-                <img src="img/email.svg" alt="E-mail">
+                <img src="img/email.svg" alt="">
                 E-mail
             </a>
 
@@ -648,8 +644,8 @@
     ========================== -->
 
     <!-- MODAL DE IMAGEM -->
-    <div id="modalImagem" class="modal-imagem">
-        <span class="fechar-modal">&times;</span>
+    <div id="modalImagem" class="modal-imagem" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+        <button type="button" class="fechar-modal" aria-label="Fechar imagem">&times;</button>
 
         <img
             id="imagemExpandida"
@@ -660,15 +656,17 @@
 
 
     <!-- MODAL DO BLOG -->
-    <div id="modalBlog" class="modal-blog">
+    <div id="modalBlog" class="modal-blog" role="dialog" aria-modal="true" aria-labelledby="tituloBlog">
         <div class="modal-blog-conteudo">
 
-            <span
+            <button
+                type="button"
                 class="fechar-blog"
+                aria-label="Fechar artigo"
                 onclick="fecharBlog()"
             >
                 &times;
-            </span>
+            </button>
 
             <h2 id="tituloBlog"></h2>
 
@@ -683,18 +681,6 @@
     ========================== -->
 
     <script src="js/procedimento.js"></script>
-
-    <script>
-        function abrirMenu() {
-            document.getElementById("menuLateral").classList.add("ativo");
-            document.getElementById("overlayMenu").classList.add("ativo");
-        }
-
-        function fecharMenu() {
-            document.getElementById("menuLateral").classList.remove("ativo");
-            document.getElementById("overlayMenu").classList.remove("ativo");
-        }
-    </script>
 
 </body>
 </html>
