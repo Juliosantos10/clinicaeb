@@ -449,8 +449,8 @@ body {
     gap: 10px;
     width: fit-content;
     margin: 25px auto 0 auto;
-    background: #0b6b3a;
-    color: #ffffff;
+    background: #25d366;
+    color: #000000;
     padding: 14px 28px;
     border-radius: 6px;
     text-decoration: none;
@@ -461,17 +461,16 @@ body {
 .btn-extra img {
     width: 22px;
     height: 22px;
-    filter: brightness(0) invert(1);
 }
 
 .btn-extra:hover,
 .btn-extra:focus-visible {
-    background: #08552e;
+    background: #1ebe5d;
     transform: translateY(-2px);
 }
 
 .btn-extra:focus-visible {
-    outline: 3px solid #d4af37;
+    outline: 3px solid #000000;
     outline-offset: 3px;
 }
 
