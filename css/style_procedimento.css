@@ -470,7 +470,7 @@ body {
 }
 
 .btn-extra:focus-visible {
-    outline: 3px solid #000000;
+    outline: 3px solid #fbfbfb;
     outline-offset: 3px;
 }
 
